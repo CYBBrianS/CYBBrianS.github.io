@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    background-color: burlywood;
 }
 main{
     margin-left:20px;
@@ -31,3 +32,51 @@ h1{
  .navbar li{
     float:left;
  }
+.hover-text {
+  transition: color 0.3s, letter-spacing 0.3s;
+  color: black;
+}
+
+.hover-text:hover {
+  color: brown;
+  letter-spacing: 2px;
+}
+
+.btn {
+   font-size:2 rem;
+   font-weight: 700;
+   padding: 0.5em 1em;
+   color: var(--clr-accent);
+   background-color: var(--clr-rgba);
+   border: 10px solid var(--clr-accent);
+   border-radius: 5px;
+
+   transition: all;
+  
+
+}
+.btn:hover {
+   transform: translate(-10px);
+   background-color: brown;
+   color: black
+}
+.rise-on-hover {
+  transition: transform 0.3s ease;
+  display: inline-block; /* helps prevent jumpy layout shifts */
+}
+
+.rise-on-hover:hover {
+  transform: translateY(-10px);
+}
+body {
+  background: linear-gradient(-45deg, #a1887f, #d7ccc8, #bcaaa4, #efebe9);
+  background-size: 400% 400%;
+  animation: brownBG 40s ease infinite;
+  color: #222; /* dark text for good contrast */
+}
+
+@keyframes brownBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
