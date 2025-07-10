@@ -25,6 +25,7 @@ h1{
     text-align: 
     center
 
+
  }
  .navbar a:hover{
     background-color:black;
@@ -72,11 +73,69 @@ body {
   background: linear-gradient(-45deg, #a1887f, #d7ccc8, #bcaaa4, #efebe9);
   background-size: 400% 400%;
   animation: brownBG 40s ease infinite;
-  color: #222; /* dark text for good contrast */
+  color: #222;
 }
 
 @keyframes brownBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+/* Mobile First Adjustments */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  img, table {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  nav ul {
+    padding: 0;
+  }
 }
